@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+
+body {
+    background-color: black;
+    background-image: url("https://www.insidermedia.com/uploads/news/images/brewdog.jpg");
+    background-size: cover;
+    margin: 0px;
+    height: 100vh; 
+    width: 100vw;   
+    font-family: 'Exo', sans-serif;
+    font-weight: bolder;
+}
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.733);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-areas: 
+    "one two three"
+}   
+
+.left {
+    grid-area: one;
+    width: 30vw;
+    height: 100vh;
+    background-color: rgba(60, 0, 128, 0.356);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.middle-top {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+    grid-area: two;
+    width: 40vw;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    box-shadow: 3px 2px 11px 2px rgba(0,0,0,0.75);
+}
+.middle-bot {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: opacity 2s ease-in;
+    grid-area: two;
+    width: 40vw;
+    height: 50vh;
+    background-color: rgba(54, 54, 54, 0.568);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    color: white;
+    align-self: flex-end;
+    overflow: scroll;
+
+}
+.right {
+    grid-area: three;
+    width: 30vw;
+    height: 100vh;
+    background-color: rgba(0, 89, 255, 0.164);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+
+h1 {
+    color: white;
+    grid-area: one;
+    justify-self: center;
+    margin: 4rem 1rem;
+    font-size: 4rem;
+    text-align: left;
+}
+.right > h1 {
+    text-align: right;
+}
+
+.searchArea {
+    grid-area: one;
+    height: 6rem;
+    width: 15rem;
+    box-shadow: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.searchButton {
+    grid-area: one;
+    height: 6rem;
+    width: 13rem;
+    border-radius: 2rem;
+    background-color: rgb(0, 184, 113);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    margin-top: -10px;
+    box-shadow: 3px 2px 3px -2px rgba(0,0,0,0.75);
+}
+
+.randomText {
+    color: white;
+    grid-area: two;
+    justify-self: center;
+    margin: 4rem 1rem;
+    font-size: 4rem;
+}
+.randomButton {
+    grid-area: three;
+    height: 4rem;
+    width: 15rem;
+    border-radius: 2rem;
+    background-color: rgb(0, 184, 113);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    margin-top: -10px;
+    box-shadow: 3px 2px 3px -2px rgba(0,0,0,0.75);
+}
+.matchingBrews {
+    width: 20rem;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    grid-area: one;
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+
+    
+}
+.matches {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.466);
+    justify-self: center;
+    width: 100%;
+    padding-left: 2rem;
+}
+.matches:hover {
+    color: rgb(255, 0, 85);
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.results {
+    grid-area: one;
+    height: 80%;
+    width: 80%;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+
+}
+
+.beerImg {
+    height: 100%;
+    grid-area: two;
+    align-self: center;
+}
+label.name {
+    font-size: 2rem;
+    opacity: 1;
+}
+label {
+    margin: 10px;
+    width: 100%;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+p {
+    padding: 10px;
+    align-self: flex-end;
+    width: 70%;
+    text-align: right;
+    margin: 0px;
+    font-size: 1rem;
+}
+.selectedBeerInfo {
+    background-color: rgba(0, 0, 0, 0.473);
+    position: absolute;
+    height: 100vh;
+    width: 40vw;
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 5rem;
+    box-sizing: border-box;
+    display: none;
+}
